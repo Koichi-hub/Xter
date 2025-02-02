@@ -13,7 +13,7 @@ namespace XterWebApi.Features.Profile.Handlers
     {
         public async Task<Result<ProfileModel>> Handle(GetProfileInfoQuery request, CancellationToken cancellationToken)
         {
-            UserEntity? user = await userRepository.GetUserById(request.ProfileId);
+            UserEntity? user = await userRepository.GetUserByUserName(request.UserName);
             if (user == null)
             {
                 return new NotFoundError("Profile not found");

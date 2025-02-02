@@ -11,11 +11,5 @@
         public string UserName { get; set; } = null!;
 
         public DateTimeOffset CreateDate { get; set; }
-
-        public IEnumerable<PostModel> Posts { get; set; } = [];
-
-        public IEnumerable<FollowerModel> Followers { get; set; } = [];
-
-        public IEnumerable<FolloweeModel> Followees { get; set; } = [];
     }
 }

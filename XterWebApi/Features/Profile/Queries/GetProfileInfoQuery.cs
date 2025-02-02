@@ -6,6 +6,6 @@ namespace XterWebApi.Features.Profile.Queries
 {
     public class GetProfileInfoQuery : IRequest<Result<ProfileModel>>
     {
-        public Guid ProfileId { get; set; }
+        public string UserName { get; set; } = null!;
     }
 }
